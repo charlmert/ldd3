@@ -1,0 +1,6 @@
+*.sw*
+*.pyc
+radius.log.gz
+radius1.log
+*.cnf
+.vagrant*
