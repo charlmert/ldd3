@@ -4,12 +4,12 @@ This will re-download the debian kernel image and re-install install it.
 It's part of upgrading the debian / ubuntu system so it's completely safe.
 It re downloads the core of the ubuntu/debian operating system and installs it, overwriting any rootkit methods that may have been installed in the process.
 
-The normal upgrade process is to run:
+The normal upgrade process is to run (Not needed if you dont want to break any existing software due to upgrading):
 ```bash
 apt-get dist-upgrade
 ```
 
-After that to re-install the core only again if hacker backdoor or rootkit activity suspected run just the following:
+After that to re-install the core only again if hacker backdoor or rootkit activity suspected run just the following (safer than an upgrade because it just re-installs the existing core/kernel):
 ```bash
 apt-get install --reinstall linux-image-$(uname -r)
 update-initramfs -u -k $(uname -r)
