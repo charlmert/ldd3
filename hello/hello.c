@@ -4,7 +4,7 @@
 #include <asm/current.h>
 #include <linux/sched.h>
 
-MODULE_LICENSE("Dual BSD/GPL")
+MODULE_LICENSE("Dual BSD/GPL");
 
 static int hello_init(void)
 {

@@ -4,3 +4,13 @@ radius.log.gz
 radius1.log
 *.cnf
 .vagrant*
+*.ko.cmd
+*.mod.o.cmd
+*.o.cmd
+*.tmp_versions/
+*Module.symvers
+*.ko
+*.mod.c
+*.mod.o
+*hello.o
+*modules.order
