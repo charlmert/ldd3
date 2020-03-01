@@ -1,3 +1,14 @@
+# Debian re-install kernel
+
+This will re-download the debian kernel image and re-install install it
+
+```bash
+apt-get install --reinstall linux-image-4.9.0-12-amd64
+update-initramfs -u -k 4.9.0-12-amd64
+update-grub
+reboot now
+```
+
 # ch02
 
 - ring groups from inner to outer = kernel space to user space
@@ -13,7 +24,6 @@ printk(KERN_INFO "The process is '%s' with pid '%i'\n", current->comm, current->
 - concurrency means that each process must provision it's own data and access to shared data must not corrupt the data in any way
 -> are there libraries or examples of sql like transactional access to shared data in order to assist with data corruption prevention
 - your driver could also be executing on multiple processors / threads simultaneously
-
 
 - the stack of the module is shared by the kernel (4096 bytes for all auto vars and functions)
 - the module_init should declare variables and functions to reside in it's own stack?
