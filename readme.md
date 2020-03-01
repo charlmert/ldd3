@@ -1,10 +1,18 @@
 # Debian re-install kernel
 
-This will re-download the debian kernel image and re-install install it
+This will re-download the debian kernel image and re-install install it.
+It's part of upgrading the debian / ubuntu system so it's completely safe.
+It re downloads the core of the ubuntu/debian operating system and installs it, overwriting any rootkit methods that may have been installed in the process.
 
+The normal upgrade process is to run:
 ```bash
-apt-get install --reinstall linux-image-4.9.0-12-amd64
-update-initramfs -u -k 4.9.0-12-amd64
+apt-get dist-upgrade
+```
+
+After that to re-install the core only again if hacker backdoor or rootkit activity suspected run just the following:
+```bash
+apt-get install --reinstall linux-image-$(uname -r)
+update-initramfs -u -k $(uname -r)
 update-grub
 reboot now
 ```
